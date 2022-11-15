@@ -33,7 +33,7 @@ Typora 是一款轻便简洁的 Markdown 编辑器，支持即时渲染技术，
 
 1、在 `D:\hexo` 目录下，通过输入命令: `hexo new "文章 title"` 会在` /source `文件夹下生成对应文章的` .md 文件`，然后就可以通过` Typora `打开此文件编写文章并保存了
 
-2、当您写完该篇文章后，依次输入以下命令:
+2、当您写完该篇文章后，依次输入以下命令生成文章:
 
 - `hexo clean` ：删除 public 文件夹，即删除旧的博客文章
 
@@ -41,9 +41,13 @@ Typora 是一款轻便简洁的 Markdown 编辑器，支持即时渲染技术，
 
 - `hexo s`     ：本地查看
 
-- `git push -u hexo hexo:hexo`: 把部署资源推到hexo
-
 - `hexo d`     ：将博客推送到 github 上的master
+
+另外需要以下命令把本次更新的部署资源推到hexo
+- git add .
+- git commit -m "update"
+- git push -u hexo hexo:hexo
+
 
 
 ## 其他 
