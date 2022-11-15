@@ -1,6 +1,15 @@
 # 我的博客
 
-# 1.部署
+# 1.前期准备
+
+- 安装git:https://git-scm.com/download/win
+- 安装node:https://nodejs.org/en/
+- 安装cnpm:`npm install -g cnpm --registry==https://registry.npm.taobao.org`
+- 安装hexo:`cnpm install -g hexo-cli`
+- 生成.ssh密钥：`ssh-keygen -t rsa -C "你的github登录邮箱"`
+- 把公共密码复制到github上： `C:\Users\您的用户名\.ssh\id_rsa.pub`的内容复制到` github 主页，进入个人设置 -> SSH and GPG keys -> New SSH key`
+- 配置user和email:`git config --global user.name "您的 Github username"`和`git config --global user.email "xxx@qq.com"`
+
 
 # 2.使用 Typora 编写博客
 ## 2.1 Typora 介绍
@@ -26,13 +35,20 @@ Typora 是一款轻便简洁的 Markdown 编辑器，支持即时渲染技术，
 
 2、当您写完该篇文章后，依次输入以下命令:
 
-- hexo clean 删除 public 文件夹，即删除旧的博客文章
+- `hexo clean` ：删除 public 文件夹，即删除旧的博客文章
 
-- hexo g 生成 public 文件夹，即生成新的博客文章相关 html 文件
+- `hexo g`     ：生成 public 文件夹，即生成新的博客文章相关 html 文件
 
-- hexo d 将博客推送到 github
+- `hexo s`     ：本地查看
 
-6.4 向 Hexo 博客中插入图片
+- `git push -u hexo hexo:hexo`: 把部署资源推到hexo
+
+- `hexo d`     ：将博客推送到 github 上的master
+
+
+## 其他 
+
+向 Hexo 博客中插入图片
 
 当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/images 文件夹中，通过 markdown 语法访问它们。
 ```md
